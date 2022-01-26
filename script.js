@@ -109,5 +109,21 @@ form.addEventListener('submit', (e) => {
     console.log("yes !");
 });
 
+/*-------Evenement Load----------*/
+window.addEventListener('load', () => alert("c'est chargé!"))
+
+/*-------FOR EACH----------*/
+
+/*var boxes = document.getElementsByClassName('box'); 
+ATTENTION getElementsByClassName ne doit être utiliser que sur plusieurs éléments à la fois */
+
+var boxes = document.querySelectorAll('.box'); 
+boxes.forEach((box) => {
+    box.addEventListener('click', (e) => {
+        e.target.style.transform = "scale(0.7)"
+    })
+});
+    
+
 
 
