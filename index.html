@@ -30,16 +30,23 @@
             <li>Contacts</li>
         </ul>
     </nav>
+    
 
     <form action="">
         <input type="text" placeholder="Entrez le nom">
         <select name="" id="">
+            <!--Ne surtout pas oublier la "value" c'est elle qui transmet l'info à JS via e.target.value-->
+
             <option value="">Selectionne ton langage</option>
-            <option value="">Html</option>
-            <option value="">CSS</option>
-            <option value="">Javascript</option>
+            <option value="Html">Html</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
         </select>
+<!--le "id" de l'input et le "for" du label permet la synchro -->
+        <input type="checkbox" id="cgv">
+        <label for="cgv">Condition du CGV</label>  
         <input type="submit" value="Valider">
+        <div></div>
     </form>
     
 </body>

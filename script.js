@@ -77,7 +77,37 @@ window.addEventListener('scroll', function() {
 })
 
 /*-----------------------FORMULAIRE------------------------*/
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector('select');
+const form = document.querySelector('form');
+let language = "";
+let textuel = "";
 
+
+
+inputName.addEventListener('input', (e) => {
+    textuel = e.target.value;
+});
+
+select.addEventListener('change', (e) => {
+    language = e.target.value;
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+//cgv vient de l'id de l'element checkbox
+    if (cgv.checked) {
+        document.querySelector('form > div').innerHTML = `   
+        <h3>pseudo : ${textuel} </h3>
+        <h4>langage : ${language}</h4>
+        `
+    /* Attention c'est quillemet touche 7 */
+    } else {
+        alert('Cochez les CGV');
+    }
+
+    console.log("yes !");
+});
 
 
 
